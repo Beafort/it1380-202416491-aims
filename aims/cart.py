@@ -26,6 +26,9 @@ class Cart:
     def total_cost(self):
         return sum(item.cost for item in self.items)
 
+    def apply_discount(self, percent):
+      return self.total_cost() * percent / 100
+
     def print_cart(self): 
         for dvd in self.items:
             print(dvd)
