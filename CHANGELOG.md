@@ -1,3 +1,7 @@
+## [1.0.1]
+
+- Sửa lỗi search không phân biệt hoa thường
+
 ## [1.0.0]
 
 ### Added
