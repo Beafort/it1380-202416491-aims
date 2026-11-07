@@ -28,7 +28,14 @@ class CartOperation(unittest.TestCase):
         # The 21st DVD should exceed the limit and return False
         extra_dvd = DigitalVideoDisc("Extra DVD", "Category", 10.0)
         self.assertFalse(self.cart.add_dvd(extra_dvd))
-        
+    def test_twenty_percent_off(self):
+      self.cart.add_dvd(DigitalVideoDisc("X", "Animation", cost=100))        
+      self.assertTrue(self.cart.apply_discount(20) == 80)
+
+    def test_percent_over_100_raises(self):
+        self.cart.add_dvd(DigitalVideoDisc("X", "Animation", cost=100))
+        with self.assertRaises(ValueError):
+            self.cart.apply_discount(150)
 
 if __name__ == '__main__':
     unittest.main()
