@@ -9,7 +9,6 @@ def main():
     cart.add_dvd(DigitalVideoDisc("Aladdin", "Animation", cost=18.99))
     cart.print_cart()
     print(f"Total cost: {cart.total_cost():.2f} $")
-    print(f"Total cost after discount: {cart.apply_discount(80):.2f} $")
     print("Enter title to search: ")
     print(search_by_title(input(), cart))
 
