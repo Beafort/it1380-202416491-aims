@@ -1,4 +1,2 @@
-def search_by_title(title, cart):
-  for item in cart.items:
-      if(item.title == title):
-        return item
+def search_by_title(keyword, cart):
+  return [dvd for dvd in cart.items if keyword.lower() in dvd.title.lower()]
