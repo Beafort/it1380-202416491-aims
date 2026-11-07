@@ -34,3 +34,9 @@ class Cart:
     def print_cart(self): 
         for dvd in self.items:
             print(dvd)
+
+    def sort_by_title(self):
+        self.items.sort(key=lambda dvd: dvd.title)
+
+    def sort_by_cost(self):
+        self.items.sort(key=lambda dvd: dvd.cost, reverse=True)
